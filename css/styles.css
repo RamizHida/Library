@@ -1,0 +1,33 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 7px;
+  font-size: 1.5rem;
+  background: #fef2f2;
+}
+
+.heading {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+}
+
+.btn {
+  height: fit-content;
+  color: #fff;
+  background: #0ea5e9;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 2rem;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: ease-in 0.1s;
+  cursor: pointer;
+}
