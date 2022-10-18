@@ -6,23 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
-    <div class="heading">
-      <button class="btn">Delete All</button>
-      <h1 class="title">Library</h1>
-      <button class="btn" id="add">Add Book +</button>
-    </div>
     <form action="" class="book--form">
-      <div>
-        <label for="title">Title</label>
-        <input type="text" id="title" required />
-      </div>
       <div>
         <label for="author">Author</label>
         <input type="text" id="author" required />
+      </div>
+      <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" required />
       </div>
       <div>
         <label for="pages">Number of Pages</label>
@@ -30,12 +24,11 @@
       </div>
       <div>
         <label for="read">Read?</label>
-        <input type="checkbox" id="read" />
+        <input type="checkbox" id="read" required />
       </div>
       <div>
-        <button type="button" id="submit--btn">Submit</button>
+        <button type="submit">Submit</button>
       </div>
     </form>
-    <div class="container"></div>
   </body>
 </html>
