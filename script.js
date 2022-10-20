@@ -4,6 +4,7 @@ let submitBtn = document.querySelector("#submit--btn");
 let book = document.querySelector(".book");
 let container = document.querySelector(".container");
 let data;
+let deleteClick = 0;
 
 addBtn.addEventListener("click", function () {
   document.body.style.opacity = "0.65";
@@ -164,6 +165,27 @@ function displaybook() {
       bookCard.appendChild(dummyYes).remove();
       bookCard.appendChild(dummyNo);
       myLibrary[bookCard.getAttribute("datanum")].read = "No 😓";
+    }
+  });
+
+  deleteButton.addEventListener("click", function (e) {
+    deleteClick++;
+    if (e.target.parentElement.parentElement.getAttribute("datanum")) {
+      myLibrary.splice(bookCard.getAttribute("datanum"), 1);
+      container.removeChild(e.target.parentElement.parentElement);
+    }
+    data = myLibrary.length - 1;
+
+    let children = container.childNodes;
+    let childArr = Array.prototype.slice.call(children);
+
+    for (let i = 0; i < childArr.length; i++) {
+      // if (!book.nextElementSibling) continue;
+      if (
+        childArr[i].getAttribute("datanum") >
+        e.target.parentElement.parentElement.getAttribute("datnum")
+      )
+        childArr[i].setAttribute("datanum", i);
     }
   });
 }
