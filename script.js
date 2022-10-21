@@ -1,4 +1,5 @@
 let addBtn = document.querySelector("#add");
+let deleteAll = document.querySelector("#deleteAll");
 let bookForm = document.querySelector(".book--form");
 let submitBtn = document.querySelector("#submit--btn");
 let book = document.querySelector(".book");
@@ -187,5 +188,15 @@ function displaybook() {
       )
         childArr[i].setAttribute("datanum", i);
     }
+  });
+
+  // Delete All Books
+  deleteAll.addEventListener("click", function () {
+    let numOfElem;
+    for (let i = 1; i <= myLibrary.length; i++) {
+      numOfElem = i;
+    }
+    container.replaceChildren();
+    myLibrary.splice(0, numOfElem);
   });
 }
